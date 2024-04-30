@@ -1,0 +1,258 @@
+$white: #fff;
+$black: #000;
+$color1: #ffeeee;
+$color2: #e5e5e5;
+$color3: #c5c5c5;
+$color4: #4e889e;
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    font-family: "Rubik", sans-serif;
+}
+
+body {
+    background-color: $color1;
+    font-size: 62.5%;
+}
+
+.portfolio-container {
+    nav {
+        width: 100vw;
+        background-color: $color2;
+
+        .navbar-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 85%;
+            margin: 0 auto;
+            padding: 6px 0;
+
+            .dev-logo-container {
+                display: flex;
+
+                .jez-logo {
+                    width: 42px;
+                    height: 42px;
+                }
+
+                .jez-text {
+                    margin-left: 12px;
+                    font-size: 2.5rem;
+                    font-weight: 500;
+                    color: $black;
+                }
+
+                // .dev-text::after {
+                //     content: '_';
+                //     position: absolute;
+                //     top: 0;
+                //     left: 0;
+                //     width: 100%;
+                //     background-color: $rename1;
+                //     animation: typingEffect 4s steps(3) infinite, flicker .5s step-end infinite alternate;
+                // }
+            }
+
+            .menu-container {
+                display: flex;
+
+                svg {
+                    width: 34px;
+                    height: 32px;
+                    color: $black;
+                    cursor: pointer;
+                }
+            }
+
+            .nav-menu-container {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100vw;
+                height: 100vh;
+                background-color: $color1;
+                z-index: 1;
+
+                .close-menu-container {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    width: 85%;
+                    padding: 10px 0;
+                    margin: 0 auto;
+
+                    svg {
+                        width: 34px;
+                        height: 34px;
+                        cursor: pointer;
+                    }
+
+                    svg:hover {
+                        color: #f00;
+                    }
+
+                    .menu-text {
+                        font-size: 2rem;
+                        font-weight: 500;
+                    }
+                }
+
+                .button-appearance-container {
+                    width: 85%;
+                    padding-top: 40px;
+                    margin: 0 auto;
+                    text-align: center;
+
+                    .text-appearance {
+                        padding-bottom: 6px;
+                        color: $black;
+                        font-size: 1rem;
+                        font-weight: 500;
+                    }
+                }
+
+                .menu-options {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    width: 85%;
+                    margin: 0 auto;
+
+                    li {
+                        padding-top: 40px;
+                        list-style: none;
+
+                        a {
+                            padding-bottom: 4px;
+                            color: $black;
+                            text-decoration: none;
+                            font-size: 1.5rem;
+                        }
+
+                        a:hover {
+                            color: $color4;
+                            border-bottom: 2px solid $color4;
+                            border-radius: 8px;
+                        }
+                    }
+                }
+
+                .social-container {
+                    position: absolute;
+                    bottom: 0;
+                    display: flex;
+                    justify-content: center;
+                    width: 100%;
+
+                    .social {
+                        padding: 0 10px;
+                        margin: 6px 0;
+                        list-style: none;
+
+                        svg {
+                            width: 32px;
+                            height: 32px;
+                            cursor: pointer;
+                        }
+                    }
+
+                    .git-hub:hover {
+                        color: #ff7300;
+                    }
+
+                    .linked-in:hover {
+                        color: #1e5a92;
+                    }
+                }
+            }
+        }
+
+        .line-separator-container {
+            width: 95%;
+            margin: 0 auto;
+            border-bottom: 2.5px solid rgba(102, 100, 100, 0.5);
+            border-radius: 2px;
+        }
+    }
+}
+
+@media (min-width: 770px) {
+    .portfolio-container {
+        nav {
+            .navbar-container {
+                width: 95%;
+
+                .menu-container {
+                    display: none;
+                }
+
+                .nav-menu-container {
+                    position: relative;
+                    display: flex;
+                    justify-content: end;
+                    height: auto;
+                    background-color: transparent;
+
+                    .close-menu-container {
+                        display: none;
+                    }
+
+                    .line-separator-container {
+                        display: none;
+                    }
+
+                    .button-appearance-container {
+                        display: inline-block;
+                        width: auto;
+                        padding: 0 0 0 8px;
+                        margin: 0;
+                        border-left: 2px solid $black;
+                    }
+
+                    .menu-options {
+                        flex-direction: row;
+                        width: auto;
+                        margin: 0;
+
+                        li {
+                            padding: 0 15px;
+
+                            a {
+                                padding: 0;
+                                font-size: 1.2rem;
+                            }
+                        }
+                    }
+
+                    .social-container {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@keyframes typingEffect {
+
+    40%,
+    60% {
+        left: 100%;
+    }
+
+    100% {
+        left: 0%;
+    }
+}
+
+@keyframes flicker {
+    50% {
+        color: transparent;
+    }
+}

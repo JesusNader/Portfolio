@@ -1,0 +1,198 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  font-family: "Rubik", sans-serif;
+}
+
+body {
+  background-color: #ffeeee;
+  font-size: 62.5%;
+}
+
+.portfolio-container nav {
+  width: 100vw;
+  background-color: #e5e5e5;
+}
+.portfolio-container nav .navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 85%;
+  margin: 0 auto;
+  padding: 6px 0;
+}
+.portfolio-container nav .navbar-container .dev-logo-container {
+  display: flex;
+}
+.portfolio-container nav .navbar-container .dev-logo-container .jez-logo {
+  width: 42px;
+  height: 42px;
+}
+.portfolio-container nav .navbar-container .dev-logo-container .jez-text {
+  margin-left: 12px;
+  font-size: 2.5rem;
+  font-weight: 500;
+  color: #000;
+}
+.portfolio-container nav .navbar-container .menu-container {
+  display: flex;
+}
+.portfolio-container nav .navbar-container .menu-container svg {
+  width: 34px;
+  height: 32px;
+  color: #000;
+  cursor: pointer;
+}
+.portfolio-container nav .navbar-container .nav-menu-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #ffeeee;
+  z-index: 1;
+}
+.portfolio-container nav .navbar-container .nav-menu-container .close-menu-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 85%;
+  padding: 10px 0;
+  margin: 0 auto;
+}
+.portfolio-container nav .navbar-container .nav-menu-container .close-menu-container svg {
+  width: 34px;
+  height: 34px;
+  cursor: pointer;
+}
+.portfolio-container nav .navbar-container .nav-menu-container .close-menu-container svg:hover {
+  color: #f00;
+}
+.portfolio-container nav .navbar-container .nav-menu-container .close-menu-container .menu-text {
+  font-size: 2rem;
+  font-weight: 500;
+}
+.portfolio-container nav .navbar-container .nav-menu-container .button-appearance-container {
+  width: 85%;
+  padding-top: 40px;
+  margin: 0 auto;
+  text-align: center;
+}
+.portfolio-container nav .navbar-container .nav-menu-container .button-appearance-container .text-appearance {
+  padding-bottom: 6px;
+  color: #000;
+  font-size: 1rem;
+  font-weight: 500;
+}
+.portfolio-container nav .navbar-container .nav-menu-container .menu-options {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 85%;
+  margin: 0 auto;
+}
+.portfolio-container nav .navbar-container .nav-menu-container .menu-options li {
+  padding-top: 40px;
+  list-style: none;
+}
+.portfolio-container nav .navbar-container .nav-menu-container .menu-options li a {
+  padding-bottom: 4px;
+  color: #000;
+  text-decoration: none;
+  font-size: 1.5rem;
+}
+.portfolio-container nav .navbar-container .nav-menu-container .menu-options li a:hover {
+  color: #4e889e;
+  border-bottom: 2px solid #4e889e;
+  border-radius: 8px;
+}
+.portfolio-container nav .navbar-container .nav-menu-container .social-container {
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+.portfolio-container nav .navbar-container .nav-menu-container .social-container .social {
+  padding: 0 10px;
+  margin: 6px 0;
+  list-style: none;
+}
+.portfolio-container nav .navbar-container .nav-menu-container .social-container .social svg {
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+}
+.portfolio-container nav .navbar-container .nav-menu-container .social-container .git-hub:hover {
+  color: #ff7300;
+}
+.portfolio-container nav .navbar-container .nav-menu-container .social-container .linked-in:hover {
+  color: #1e5a92;
+}
+.portfolio-container nav .line-separator-container {
+  width: 95%;
+  margin: 0 auto;
+  border-bottom: 2.5px solid rgba(102, 100, 100, 0.5);
+  border-radius: 2px;
+}
+
+@media (min-width: 770px) {
+  .portfolio-container nav .navbar-container {
+    width: 95%;
+  }
+  .portfolio-container nav .navbar-container .menu-container {
+    display: none;
+  }
+  .portfolio-container nav .navbar-container .nav-menu-container {
+    position: relative;
+    display: flex;
+    justify-content: end;
+    height: auto;
+    background-color: transparent;
+  }
+  .portfolio-container nav .navbar-container .nav-menu-container .close-menu-container {
+    display: none;
+  }
+  .portfolio-container nav .navbar-container .nav-menu-container .line-separator-container {
+    display: none;
+  }
+  .portfolio-container nav .navbar-container .nav-menu-container .button-appearance-container {
+    display: inline-block;
+    width: auto;
+    padding: 0 0 0 8px;
+    margin: 0;
+    border-left: 2px solid #000;
+  }
+  .portfolio-container nav .navbar-container .nav-menu-container .menu-options {
+    flex-direction: row;
+    width: auto;
+    margin: 0;
+  }
+  .portfolio-container nav .navbar-container .nav-menu-container .menu-options li {
+    padding: 0 15px;
+  }
+  .portfolio-container nav .navbar-container .nav-menu-container .menu-options li a {
+    padding: 0;
+    font-size: 1.2rem;
+  }
+  .portfolio-container nav .navbar-container .nav-menu-container .social-container {
+    display: none;
+  }
+}
+@keyframes typingEffect {
+  40%, 60% {
+    left: 100%;
+  }
+  100% {
+    left: 0%;
+  }
+}
+@keyframes flicker {
+  50% {
+    color: transparent;
+  }
+}/*# sourceMappingURL=index.css.map */
