@@ -25,15 +25,14 @@ function NavBar() {
         <nav>
             <div className="navbar-container">
                 <figure className="dev-logo-container">
-                    <img className="jez-logo" src="../public/LogoJezBlack.png" alt="Jez logo" />
-                    <p className="jez-text">Jez</p>
+                    <img className="jez-logo" src="../public/bannerJezBlack.png" alt="Jez logo" />
                 </figure>
                 <div className="menu-container">
                     <SlMenu onClick={handleMenu} />
                 </div>
                 {isOpenMenu && <Menu handleMenu={handleMenu} />}
             </div>
-            <div className="line-separator-container"></div>
+            {/* <div className="line-separator-container"></div> */}
         </nav>
     );
 }

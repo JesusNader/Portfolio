@@ -1,9 +1,13 @@
 $white: #fff;
 $black: #000;
-$color1: #ffeeee;
-$color2: #e5e5e5;
-$color3: #c5c5c5;
-$color4: #4e889e;
+$color1: #f9ffe4;
+$color2: #e6ecd2;
+$color3: #d3d9bf;
+$color4: #c0c6ad;
+$color5: #adb39a;
+$color-1: #f0f0f0;
+$color-2: #e1e1e1;
+$color-3: #2c84e9;
 
 * {
     box-sizing: border-box;
@@ -16,14 +20,14 @@ html {
 }
 
 body {
-    background-color: $color1;
+    background-color: $color-1;
     font-size: 62.5%;
 }
 
 .portfolio-container {
     nav {
         width: 100vw;
-        background-color: $color2;
+        background-color: $color-1;
 
         .navbar-container {
             display: flex;
@@ -37,26 +41,8 @@ body {
                 display: flex;
 
                 .jez-logo {
-                    width: 42px;
-                    height: 42px;
+                    height: 48px;
                 }
-
-                .jez-text {
-                    margin-left: 12px;
-                    font-size: 2.5rem;
-                    font-weight: 500;
-                    color: $black;
-                }
-
-                // .dev-text::after {
-                //     content: '_';
-                //     position: absolute;
-                //     top: 0;
-                //     left: 0;
-                //     width: 100%;
-                //     background-color: $rename1;
-                //     animation: typingEffect 4s steps(3) infinite, flicker .5s step-end infinite alternate;
-                // }
             }
 
             .menu-container {
@@ -76,7 +62,7 @@ body {
                 left: 0;
                 width: 100vw;
                 height: 100vh;
-                background-color: $color1;
+                background-color: $color-1;
                 z-index: 1;
 
                 .close-menu-container {
@@ -178,6 +164,67 @@ body {
             margin: 0 auto;
             border-bottom: 2.5px solid rgba(102, 100, 100, 0.5);
             border-radius: 2px;
+        }
+    }
+
+    .hero-section-container {
+        width: 100vw;
+        padding: 40px 0;
+        background-color: $color-2;
+        background: linear-gradient(to bottom, rgba(240,240,240,1) 0%, rgba(240,240,240,1) 8%, rgba(225,225,225,1) 18%, rgba(225,225,225,1) 51%, rgba(225,225,225,1) 75%, rgba(240,240,240,1) 95%, rgba(240,240,240,1) 100%);
+
+        .hero-info-container {
+            width: 85%;
+            max-width: 460px;
+            margin: 24px 32px;
+            overflow: hidden;
+            // 471px mediaquery hero section center
+
+            .hero-title-container {
+                .hero-title {
+                    position: relative;
+                    display: inline-block;
+                    margin-right: 10px;
+                    font-size: 2.5rem;
+                }
+
+                .dev-text {
+                    color: $color-3;
+                }
+
+                .dev-text::after {
+                    content: '_';
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    background-color: $color-2;
+                    animation: typingEffect 4s steps(11) infinite, flicker .5s step-end infinite alternate;
+                }
+            }
+
+            .hero-text{
+                margin: 18px 0;
+                font-size: 1.2rem;
+                font-weight: 300;
+            }
+
+            .hero-button{
+                padding: 12px;
+                margin: 12px 0 0 0;
+                border: none;
+                border-radius: 4px;
+                background-color: $color-3;
+                color: $white;
+                font-size: 1.2rem;
+                font-weight: 600;
+                cursor: pointer;
+                transition: .3s;
+            }
+
+            .hero-button:hover{
+                background-color: #78b3f7;
+            }
         }
     }
 }
