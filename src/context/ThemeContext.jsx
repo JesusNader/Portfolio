@@ -1,10 +1,11 @@
 import { createContext, useContext, useState } from "react";
+import { useLocalStorage } from "../hooks/useLocalStorage";
 
 const ThemeContext = createContext();
 
 function ThemeContextProvider({children}) {
-    const [theme, setTheme] = useState(false);
-    const [darkChecked, setDarkChecked] = useState(false);
+    const [theme, setTheme] = useLocalStorage("ThemeDark", false);
+    const [darkChecked, setDarkChecked] = useLocalStorage("SwitchActive", theme);
 
     return(
         <ThemeContext.Provider value={{theme, setTheme, darkChecked, setDarkChecked}}>
