@@ -4,6 +4,7 @@ import { Menu } from "./Menu";
 
 function NavBar() {
     const [isOpenMenu, setIsOpenMenu] = useState(false);
+    const [navBg, setNavBg] = useState(false);
 
     const handleMenu = () => setIsOpenMenu(!isOpenMenu);
 
@@ -21,8 +22,18 @@ function NavBar() {
         return () => window.removeEventListener("resize", handleResize);
     }, []);
 
+    const changeNavBg = () => {
+        if (window.scrollY >= 1) {
+            setNavBg(true);
+        } else {
+            setNavBg(false);
+        }
+    }
+
+    window.addEventListener("scroll", changeNavBg);
+
     return (
-        <nav>
+        <nav className={`${navBg ? "nav-bg" : ''}`}>
             <div className="navbar-container">
                 <figure className="dev-logo-container">
                     <img className="jez-logo" src="../public/bannerJezBlack.png" alt="Jez logo" />

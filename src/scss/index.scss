@@ -8,6 +8,7 @@ $color5: #adb39a;
 $color-1: #f0f0f0;
 $color-2: #e1e1e1;
 $color-3: #2c84e9;
+$color-4: #a5a5a5;
 
 * {
     box-sizing: border-box;
@@ -22,12 +23,16 @@ html {
 body {
     background-color: $color-1;
     font-size: 62.5%;
+    overflow-x: hidden;
 }
 
 .portfolio-container {
     nav {
+        position: fixed;
+        top: 0;
         width: 100vw;
         background-color: $color-1;
+        z-index: 2;
 
         .navbar-container {
             display: flex;
@@ -122,8 +127,8 @@ body {
                         }
 
                         a:hover {
-                            color: $color4;
-                            border-bottom: 2px solid $color4;
+                            color: $color-3;
+                            border-bottom: 2px solid $color-3;
                             border-radius: 8px;
                         }
                     }
@@ -167,16 +172,26 @@ body {
         }
     }
 
+    .nav-bg {
+        background: linear-gradient(to bottom, rgba(240, 240, 240, 1) 0%, rgba(240, 240, 240, 0.42) 100%);
+        backdrop-filter: blur(10px);
+    }
+
+    .section {
+        width: 100vw;
+        padding-bottom: 40px;
+    }
+
     .hero-section-container {
         width: 100vw;
-        padding: 40px 0;
-        background-color: $color-2;
-        background: linear-gradient(to bottom, rgba(240,240,240,1) 0%, rgba(240,240,240,1) 8%, rgba(225,225,225,1) 18%, rgba(225,225,225,1) 51%, rgba(225,225,225,1) 75%, rgba(240,240,240,1) 95%, rgba(240,240,240,1) 100%);
+        margin-top: 60px;
+        padding-top: 40px;
+        background: linear-gradient(to bottom, rgba(240, 240, 240, 1) 0%, rgba(240, 240, 240, 1) 8%, rgba(225, 225, 225, 1) 18%, rgba(225, 225, 225, 1) 51%, rgba(225, 225, 225, 1) 75%, rgba(240, 240, 240, 1) 95%, rgba(240, 240, 240, 1) 100%);
 
         .hero-info-container {
-            width: 85%;
             max-width: 460px;
-            margin: 24px 32px;
+            padding: 0 16px;
+            margin: 24px 0;
             overflow: hidden;
             // 471px mediaquery hero section center
 
@@ -203,13 +218,13 @@ body {
                 }
             }
 
-            .hero-text{
+            .hero-text {
                 margin: 18px 0;
                 font-size: 1.2rem;
                 font-weight: 300;
             }
 
-            .hero-button{
+            .hero-button {
                 padding: 12px;
                 margin: 12px 0 0 0;
                 border: none;
@@ -222,8 +237,78 @@ body {
                 transition: .3s;
             }
 
-            .hero-button:hover{
+            .hero-button:hover {
                 background-color: #78b3f7;
+            }
+        }
+    }
+
+    .about-me-container {
+        background-image: url(../assets/images/backgroundWhite.svg);
+        background-size: cover;
+        background-repeat: no-repeat;
+
+        &>div {
+            max-width: 460px;
+            padding: 0 16px;
+            margin: 24px 0;
+        }
+
+        .info-about-me-container {
+            .title-about-me {
+                font-size: 1.6rem;
+            }
+
+            .text-about-me {
+                margin: 18px 0;
+                font-size: 1.2rem;
+                font-weight: 300;
+            }
+        }
+
+        .skills-about-me-container {
+            .title {
+                display: inline-block;
+                margin: 32px 0 0 0;
+                font-size: 1.4rem;
+                font-weight: 400;
+            }
+
+            .icon-container {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                margin: 30px 0;
+
+                .icon {
+                    width: 50px;
+                    height: 50px;
+                    margin: 14px 20px;
+                }
+            }
+
+            .title-skills {
+                text-align: center;
+                font-size: 1.4rem;
+                font-weight: 600;
+            }
+
+            .info-skills-container {
+                display: flex;
+                flex-direction: column;
+                margin-top: 20px;
+
+                .skills {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    margin-bottom: 40px;
+                    border: 1px solid $color-4;
+                    border-radius: 8px;
+                    background-color: #fff;
+                    box-shadow: 2px 2px 24px rgba(0, 0, 0, .2);
+                    list-style: none;
+                }
             }
         }
     }
