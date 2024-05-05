@@ -163,15 +163,16 @@ body::-webkit-scrollbar-thumb:active {
   width: 100vw;
   padding-bottom: 40px;
 }
+.portfolio-container .section > div {
+  max-width: 460px;
+  padding: 0 16px;
+}
 .portfolio-container .hero-section-container {
-  width: 100vw;
   margin-top: 60px;
   padding-top: 40px;
   background: linear-gradient(to bottom, rgb(240, 240, 240) 0%, rgb(240, 240, 240) 8%, rgb(225, 225, 225) 18%, rgb(225, 225, 225) 51%, rgb(225, 225, 225) 75%, rgb(240, 240, 240) 95%, rgb(240, 240, 240) 100%);
 }
 .portfolio-container .hero-section-container .hero-info-container {
-  max-width: 460px;
-  padding: 0 16px;
   margin: 24px 0;
   overflow: hidden;
 }
@@ -219,8 +220,6 @@ body::-webkit-scrollbar-thumb:active {
   background-repeat: no-repeat;
 }
 .portfolio-container .about-me-container > div {
-  max-width: 460px;
-  padding: 0 16px;
   margin: 24px 0;
 }
 .portfolio-container .about-me-container .info-about-me-container .title-about-me {
@@ -268,10 +267,6 @@ body::-webkit-scrollbar-thumb:active {
   background-color: #f0f0f0;
   box-shadow: 2px 2px 24px rgba(0, 0, 0, 0.2);
   list-style: none;
-}
-.portfolio-container .proyects-container > div {
-  max-width: 460px;
-  padding: 0 16px;
 }
 .portfolio-container .proyects-container > div .arrows-icons-container {
   position: relative;
@@ -339,6 +334,60 @@ body::-webkit-scrollbar-thumb:active {
 }
 .portfolio-container .proyects-container .proyects::-webkit-scrollbar {
   width: 0;
+}
+.portfolio-container .contact-section-container .title-contact-container .title {
+  font-size: 1.6rem;
+}
+.portfolio-container .contact-section-container .contact-container {
+  display: flex;
+  flex-direction: column;
+  padding: 0 16px;
+}
+.portfolio-container .contact-section-container .contact-container .form-data-container {
+  display: flex;
+  flex-direction: column;
+}
+.portfolio-container .contact-section-container .contact-container .form-data-container label {
+  margin: 20px 0;
+  font-size: 1.2rem;
+  font-weight: 300;
+}
+.portfolio-container .contact-section-container .contact-container .form-data-container .inputs {
+  padding: 20px;
+  border: 2px solid #000;
+  border-radius: 6px;
+  font-size: 1rem;
+  box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.2);
+}
+.portfolio-container .contact-section-container .contact-container .form-data-container .inputs:focus {
+  outline-color: #2c84e9;
+  box-shadow: 0px 0px 12px rgba(44, 132, 233, 0.4);
+}
+.portfolio-container .contact-section-container .contact-container .form-data-container .inputs::-moz-placeholder {
+  font-size: 1rem;
+  font-weight: 600;
+}
+.portfolio-container .contact-section-container .contact-container .form-data-container .inputs::placeholder {
+  font-size: 1rem;
+  font-weight: 600;
+}
+.portfolio-container .contact-section-container .contact-container .form-data-container .text-area {
+  font-family: "Rubik", sans-serif;
+  resize: none;
+}
+.portfolio-container .contact-section-container .contact-container .button-send {
+  padding: 16px;
+  margin: 40px 0 0 0;
+  border: none;
+  border-radius: 4px;
+  background-color: #2c84e9;
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: 500;
+  cursor: pointer;
+}
+.portfolio-container .contact-section-container .contact-container .button-send:hover {
+  background-color: #78b3f7;
 }
 
 @media (min-width: 770px) {
