@@ -67,7 +67,7 @@ body::-webkit-scrollbar-thumb:active {
   top: 0;
   left: 0;
   width: 100vw;
-  height: 100vh;
+  height: 101vh;
   background-color: #f0f0f0;
   z-index: 1;
 }
@@ -147,12 +147,6 @@ body::-webkit-scrollbar-thumb:active {
 }
 .portfolio-container nav .navbar-container .nav-menu-container .social-container .linked-in:hover {
   color: #1e5a92;
-}
-.portfolio-container nav .line-separator-container {
-  width: 95%;
-  margin: 0 auto;
-  border-bottom: 2.5px solid rgba(102, 100, 100, 0.5);
-  border-radius: 2px;
 }
 .portfolio-container .nav-bg {
   background: linear-gradient(to bottom, rgb(240, 240, 240) 0%, rgba(240, 240, 240, 0.42) 100%);
@@ -388,6 +382,40 @@ body::-webkit-scrollbar-thumb:active {
 }
 .portfolio-container .contact-section-container .contact-container .button-send:hover {
   background-color: #78b3f7;
+}
+
+.portfolio-footer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100vw;
+  height: 70px;
+  margin-top: 20px;
+  background-color: #e1e1e1;
+}
+.portfolio-footer .footer-left img {
+  height: 48px;
+}
+.portfolio-footer .footer-right .social-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+.portfolio-footer .footer-right .social-container .social {
+  padding: 0 10px;
+  margin: 6px 0;
+  list-style: none;
+}
+.portfolio-footer .footer-right .social-container .social svg {
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+}
+.portfolio-footer .footer-right .social-container .git-hub:hover {
+  color: #ff7300;
+}
+.portfolio-footer .footer-right .social-container .linked-in:hover {
+  color: #1e5a92;
 }
 
 @media (min-width: 770px) {

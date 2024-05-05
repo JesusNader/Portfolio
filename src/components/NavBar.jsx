@@ -43,7 +43,6 @@ function NavBar() {
                 </div>
                 {isOpenMenu && <Menu handleMenu={handleMenu} />}
             </div>
-            {/* <div className="line-separator-container"></div> */}
         </nav>
     );
 }

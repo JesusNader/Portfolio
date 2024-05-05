@@ -1,10 +1,5 @@
 $white: #fff;
 $black: #000;
-$color1: #f9ffe4;
-$color2: #e6ecd2;
-$color3: #d3d9bf;
-$color4: #c0c6ad;
-$color5: #adb39a;
 $color-1: #f0f0f0;
 $color-2: #e1e1e1;
 $color-3: #2c84e9;
@@ -85,7 +80,7 @@ body::-webkit-scrollbar-thumb:active {
                 top: 0;
                 left: 0;
                 width: 100vw;
-                height: 100vh;
+                height: 101vh;
                 background-color: $color-1;
                 z-index: 1;
 
@@ -181,13 +176,6 @@ body::-webkit-scrollbar-thumb:active {
                     }
                 }
             }
-        }
-
-        .line-separator-container {
-            width: 95%;
-            margin: 0 auto;
-            border-bottom: 2.5px solid rgba(102, 100, 100, 0.5);
-            border-radius: 2px;
         }
     }
 
@@ -486,6 +474,50 @@ body::-webkit-scrollbar-thumb:active {
 
             .button-send:hover {
                 background-color: $color-5;
+            }
+        }
+    }
+}
+
+.portfolio-footer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100vw;
+    height: 70px;
+    margin-top: 20px;
+    background-color: $color-2;
+
+    .footer-left {
+        img {
+            height: 48px;
+        }
+    }
+
+    .footer-right {
+        .social-container {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+
+            .social {
+                padding: 0 10px;
+                margin: 6px 0;
+                list-style: none;
+
+                svg {
+                    width: 32px;
+                    height: 32px;
+                    cursor: pointer;
+                }
+            }
+
+            .git-hub:hover {
+                color: #ff7300;
+            }
+
+            .linked-in:hover {
+                color: #1e5a92;
             }
         }
     }
