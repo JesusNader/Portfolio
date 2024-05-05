@@ -17,10 +17,10 @@ function Menu({ handleMenu }) {
                     <a href="">About Me</a>
                 </li>
                 <li>
-                    <a href="">My Proyects</a>
+                    <a href="">My Skills</a>
                 </li>
                 <li>
-                    <a href="">My Skills</a>
+                    <a href="">My Proyects</a>
                 </li>
                 <li>
                     <a href="">Contact</a>
