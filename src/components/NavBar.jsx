@@ -1,8 +1,11 @@
 import { useEffect, useState } from "react";
 import { SlMenu } from "react-icons/sl";
 import { Menu } from "./Menu";
+import { useThemeContext } from "../context/ThemeContext";
 
 function NavBar() {
+    const { theme, setTheme, darkChecked, setDarkChecked } = useThemeContext();
+
     const [isOpenMenu, setIsOpenMenu] = useState(false);
     const [navBg, setNavBg] = useState(false);
 
@@ -36,7 +39,7 @@ function NavBar() {
         <nav className={`${navBg ? "nav-bg" : ''}`}>
             <div className="navbar-container">
                 <figure className="dev-logo-container">
-                    <img className="jez-logo" src="../public/bannerJezBlack.png" alt="Jez logo" />
+                    <img className="jez-logo" src={`${theme ? '../public/bannerJezWhite.png': '../public/bannerJezBlack.png'}`} alt="Jez logo" />
                 </figure>
                 <div className="menu-container">
                     <SlMenu onClick={handleMenu} />

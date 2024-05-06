@@ -37,6 +37,7 @@ body::-webkit-scrollbar-thumb:active {
   top: 0;
   width: 100vw;
   background-color: #f0f0f0;
+  transition: 0.3s;
   z-index: 2;
 }
 .portfolio-container nav .navbar-container {
@@ -69,25 +70,26 @@ body::-webkit-scrollbar-thumb:active {
   width: 100vw;
   height: 101vh;
   background-color: #f0f0f0;
+  transition: 0.3s;
   z-index: 1;
 }
 .portfolio-container nav .navbar-container .nav-menu-container .close-menu-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 85%;
   padding: 10px 0;
-  margin: 0 auto;
 }
 .portfolio-container nav .navbar-container .nav-menu-container .close-menu-container svg {
   width: 34px;
   height: 34px;
+  margin: 0 24px;
   cursor: pointer;
 }
 .portfolio-container nav .navbar-container .nav-menu-container .close-menu-container svg:hover {
   color: #f00;
 }
 .portfolio-container nav .navbar-container .nav-menu-container .close-menu-container .menu-text {
+  margin: 0 24px;
   font-size: 2rem;
   font-weight: 500;
 }
@@ -103,24 +105,29 @@ body::-webkit-scrollbar-thumb:active {
   font-size: 1rem;
   font-weight: 500;
 }
-.portfolio-container nav .navbar-container .nav-menu-container .menu-options {
+.portfolio-container nav .navbar-container .nav-menu-container .menu-options-container {
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+  transition: 0.3s;
+}
+.portfolio-container nav .navbar-container .nav-menu-container .menu-options-container .menu-options {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 85%;
   margin: 0 auto;
 }
-.portfolio-container nav .navbar-container .nav-menu-container .menu-options li {
+.portfolio-container nav .navbar-container .nav-menu-container .menu-options-container .menu-options li {
   padding-top: 40px;
   list-style: none;
 }
-.portfolio-container nav .navbar-container .nav-menu-container .menu-options li a {
+.portfolio-container nav .navbar-container .nav-menu-container .menu-options-container .menu-options li a {
   padding-bottom: 4px;
   color: #000;
   text-decoration: none;
   font-size: 1.5rem;
 }
-.portfolio-container nav .navbar-container .nav-menu-container .menu-options li a:hover {
+.portfolio-container nav .navbar-container .nav-menu-container .menu-options-container .menu-options li a:hover {
   color: #2c84e9;
   border-bottom: 2px solid #2c84e9;
   border-radius: 8px;
@@ -418,6 +425,53 @@ body::-webkit-scrollbar-thumb:active {
   color: #1e5a92;
 }
 
+.theme-dark nav {
+  background-color: #111010;
+  transition: 0.3s;
+}
+.theme-dark nav .navbar-container .menu-container svg {
+  color: #fff;
+  transition: 0.3s;
+}
+.theme-dark nav .navbar-container .nav-menu-container {
+  background-color: #111010;
+  transition: 0.3s;
+}
+.theme-dark nav .navbar-container .nav-menu-container .close-menu-container {
+  background-color: #202020;
+  color: #fff;
+  transition: 0.3s;
+}
+.theme-dark nav .navbar-container .nav-menu-container .button-appearance-container .text-appearance {
+  color: #fff;
+}
+.theme-dark nav .navbar-container .nav-menu-container .menu-options-container {
+  background: linear-gradient(to bottom, rgb(32, 32, 32) 0%, rgb(17, 16, 16) 37%, rgb(17, 16, 16) 100%);
+  transition: 0.3s;
+}
+.theme-dark nav .navbar-container .nav-menu-container .menu-options-container .menu-options li a {
+  color: #fff;
+}
+.theme-dark nav .navbar-container .nav-menu-container .social-container .social {
+  color: #fff;
+}
+.theme-dark .hero-section-container {
+  background: linear-gradient(to bottom, rgb(17, 16, 16) 0%, rgb(17, 16, 16) 8%, rgb(32, 32, 32) 18%, rgb(32, 32, 32) 51%, rgb(32, 32, 32) 75%, rgb(17, 16, 16) 95%, rgb(17, 16, 16) 100%);
+  transition: 0.3s;
+}
+.theme-dark .hero-section-container .hero-info-container .hero-title-container .hero-title {
+  color: #fff;
+}
+.theme-dark .hero-section-container .hero-info-container .hero-title-container .dev-text {
+  color: #2c84e9;
+}
+.theme-dark .hero-section-container .hero-info-container .hero-title-container .dev-text::after {
+  background-color: #202020;
+}
+.theme-dark .hero-section-container .hero-info-container .hero-text {
+  color: #fff;
+}
+
 @media (min-width: 770px) {
   .portfolio-container nav .navbar-container {
     width: 95%;
@@ -428,14 +482,10 @@ body::-webkit-scrollbar-thumb:active {
   .portfolio-container nav .navbar-container .nav-menu-container {
     position: relative;
     display: flex;
-    justify-content: end;
     height: auto;
     background-color: transparent;
   }
   .portfolio-container nav .navbar-container .nav-menu-container .close-menu-container {
-    display: none;
-  }
-  .portfolio-container nav .navbar-container .nav-menu-container .line-separator-container {
     display: none;
   }
   .portfolio-container nav .navbar-container .nav-menu-container .button-appearance-container {
@@ -444,21 +494,37 @@ body::-webkit-scrollbar-thumb:active {
     padding: 0 0 0 8px;
     margin: 0;
     border-left: 2px solid #000;
+    transition: 0.3s;
   }
-  .portfolio-container nav .navbar-container .nav-menu-container .menu-options {
+  .portfolio-container nav .navbar-container .nav-menu-container .menu-options-container {
+    justify-content: end;
+    width: auto;
+    margin: 0 0 0 auto;
+    transform: 0.3s;
+  }
+  .portfolio-container nav .navbar-container .nav-menu-container .menu-options-container .menu-options {
     flex-direction: row;
+    justify-content: end;
     width: auto;
     margin: 0;
   }
-  .portfolio-container nav .navbar-container .nav-menu-container .menu-options li {
+  .portfolio-container nav .navbar-container .nav-menu-container .menu-options-container .menu-options li {
     padding: 0 15px;
   }
-  .portfolio-container nav .navbar-container .nav-menu-container .menu-options li a {
+  .portfolio-container nav .navbar-container .nav-menu-container .menu-options-container .menu-options li a {
     padding: 0;
     font-size: 1.2rem;
   }
   .portfolio-container nav .navbar-container .nav-menu-container .social-container {
     display: none;
+  }
+  .theme-dark nav .navbar-container .nav-menu-container .button-appearance-container {
+    border-left: 2px solid #fff;
+    transition: 0.3s;
+  }
+  .theme-dark nav .navbar-container .nav-menu-container .menu-options-container {
+    background: transparent;
+    transition: 0.3s;
   }
 }
 @keyframes typingEffect {
