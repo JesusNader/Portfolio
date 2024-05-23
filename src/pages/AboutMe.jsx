@@ -1,11 +1,12 @@
 function AboutMe() {
     return (
-        <section className="section about-me-container">
+        <section className="section about-me-container" id="about-me">
+            <div className="degraded-section"></div>
             <div className="info-about-me-container">
                 <h2 className="title-about-me">About me</h2>
                 <p className="text-about-me">Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem, in id ad ipsum dolores eum earum tempora architecto maiores hic error harum necessitatibus quae, deserunt illo. Corrupti quis id nesciunt?</p>
             </div>
-            <div className="skills-about-me-container">
+            <div className="skills-about-me-container" id="skills">
                 <h2 className="title-skills">Skills</h2>
                 <ul className="info-skills-container">
                     <li className="skills front-end-container">

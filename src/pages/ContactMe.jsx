@@ -24,7 +24,7 @@ function ContactMe() {
     }
 
     return (
-        <section className="section contact-section-container">
+        <section className="section contact-section-container" id="contact">
             <div className="title-contact-container">
                 <h2 className="title">Contact me</h2>
             </div>

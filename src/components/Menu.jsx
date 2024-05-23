@@ -4,7 +4,7 @@ import { FaGithub } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
 import { useThemeContext } from "../context/ThemeContext";
 
-function Menu({ handleMenu }) {
+function Menu({ isOpenMenu, handleMenu }) {
 
     const { theme, setTheme, darkChecked, setDarkChecked } = useThemeContext();
 
@@ -14,7 +14,7 @@ function Menu({ handleMenu }) {
     }
 
     return (
-        <div className="nav-menu-container">
+        <div className={`nav-menu-container ${isOpenMenu ? "open" : "close"}`}>
             <figure className="close-menu-container">
                 <p className="menu-text">Menu</p>
                 <AiOutlineClose className="close-icon" onClick={handleMenu} />
@@ -22,16 +22,16 @@ function Menu({ handleMenu }) {
             <div className="menu-options-container">
                 <ul className="menu-options">
                     <li>
-                        <a href="">About Me</a>
+                        <a href="#about-me">About Me</a>
                     </li>
                     <li>
-                        <a href="">My Skills</a>
+                        <a href="#skills">My Skills</a>
                     </li>
                     <li>
-                        <a href="">My Proyects</a>
+                        <a href="#proyects">My Proyects</a>
                     </li>
                     <li>
-                        <a href="">Contact</a>
+                        <a href="#contact">Contact</a>
                     </li>
                 </ul>
             </div>
@@ -55,10 +55,14 @@ function Menu({ handleMenu }) {
             </div>
             <ul className="social-container">
                 <li className="social git-hub">
-                    <FaGithub />
+                    <a href="https://github.com/JesusNader" target="_blank">
+                        <FaGithub />
+                    </a>
                 </li>
                 <li className="social linked-in">
-                    <FaLinkedin />
+                    <a href="#" target="_blank">
+                        <FaLinkedin />
+                    </a>
                 </li>
             </ul>
         </div>
